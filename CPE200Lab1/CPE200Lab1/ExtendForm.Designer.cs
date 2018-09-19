@@ -305,9 +305,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 64);
             this.button2.TabIndex = 43;
-            this.button2.Text = "1/X";
+            this.button2.Text = "1/x";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnBinaryOperator_Click);
+            this.button2.Click += new System.EventHandler(this.btnUnaryOperator_Click);
             // 
             // button3
             // 

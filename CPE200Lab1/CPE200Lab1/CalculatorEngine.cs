@@ -21,6 +21,7 @@ namespace CPE200Lab1
                 case "-":
                 case "X":
                 case "÷":
+                case "%":
                     return true;
             }
             return false;
@@ -38,7 +39,7 @@ namespace CPE200Lab1
             }
 
         }
-        public string unaryCalculate(string operate, string operand, int maxOutputSize = 8)
+        public virtual string unaryCalculate(string operate, string operand, int maxOutputSize = 8)
         {
             switch (operate)
             {
@@ -116,12 +117,13 @@ namespace CPE200Lab1
                         remainLength = maxOutputSize - parts[0].Length - 1;
                         // trim the fractional part gracefully. =
                         return decimal.Parse(result.ToString("N" + remainLength)).ToString("G29");
+                        
                     }
                     break;
                 case "%":
-
+                return ((Convert.ToDouble(firstOperand) * Convert.ToDouble(secondOperand)) / 100).ToString();
                     //your code here
-                    break;
+                    
             }
             return "E";
         }
